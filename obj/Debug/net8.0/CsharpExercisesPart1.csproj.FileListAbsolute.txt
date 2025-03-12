@@ -1,0 +1,14 @@
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\bin\Debug\net8.0\CsharpExercisesPart1.exe
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\bin\Debug\net8.0\CsharpExercisesPart1.deps.json
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\bin\Debug\net8.0\CsharpExercisesPart1.runtimeconfig.json
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\bin\Debug\net8.0\CsharpExercisesPart1.dll
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\bin\Debug\net8.0\CsharpExercisesPart1.pdb
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.AssemblyInfoInputs.cache
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.AssemblyInfo.cs
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.csproj.CoreCompileInputs.cache
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.dll
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\refint\CsharpExercisesPart1.dll
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.pdb
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.genruntimeconfig.cache
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\ref\CsharpExercisesPart1.dll
