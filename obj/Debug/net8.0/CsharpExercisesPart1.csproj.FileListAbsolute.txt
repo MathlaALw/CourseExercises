@@ -12,3 +12,4 @@ C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\refint\Csha
 C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.pdb
 C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.genruntimeconfig.cache
 C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\ref\CsharpExercisesPart1.dll
+C:\Users\CodeLine\source\repos\CsharpExercisesPart1\obj\Debug\net8.0\CsharpExercisesPart1.sourcelink.json
