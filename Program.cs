@@ -496,11 +496,11 @@ namespace CsharpExercisesPart1
             {
                 for (int space = 1; space <= n1 - index; space++)
                 {
-                    Console.Write(" ");
+                    Console.WriteLine(" ");
                 }
                 for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
                 {
-                    Console.Write("*");
+                    Console.WriteLine("*");
                 }
                 Console.WriteLine();
             }
@@ -519,11 +519,11 @@ namespace CsharpExercisesPart1
             {
                 for (int space = 1; space <= numb - index; space++)
                 {
-                    Console.Write(" ");
+                    Console.WriteLine(" ");
                 }
                 for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
                 {
-                    Console.Write("*");
+                    Console.WriteLine("*");
                 }
                 Console.WriteLine();
             }
@@ -531,11 +531,11 @@ namespace CsharpExercisesPart1
             {
                 for (int space = 1; space <= numb - index; space++)
                 {
-                    Console.Write(" ");
+                    Console.WriteLine(" ");
                 }
                 for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
                 {
-                    Console.Write("*");
+                    Console.WriteLine("*");
                 }
                 Console.WriteLine();
 
@@ -545,6 +545,29 @@ namespace CsharpExercisesPart1
 
             //---------------------------------------------------------------------------
 
+            //10.Guess Game with helper with while loop
+            Random random = new Random();
+            int randomNumber = random.Next(1, 100);
+
+            int guess;
+            Console.WriteLine("Guess the number between 1 and 100");
+            guess = Convert.ToInt32(Console.ReadLine());
+
+            while (guess != randomNumber)
+            {
+                if (guess < randomNumber)
+                {
+                    Console.WriteLine("Too low, try again");
+                    guess = Convert.ToInt32(Console.ReadLine());
+                }
+                else if (guess > randomNumber)
+                {
+                    Console.WriteLine("Too high, try again");
+                    guess = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("You guessed the number!");
 
         }
     }
