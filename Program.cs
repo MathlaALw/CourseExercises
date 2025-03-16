@@ -271,7 +271,7 @@ namespace CsharpExercisesPart1
 
             //2.Basic ATM System
 
-            double balance = 40;
+            double balance = 1000;
             char choice;
             double withdraw, deposit;
             Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
@@ -463,6 +463,31 @@ namespace CsharpExercisesPart1
                     break;
 
             }
+
+
+            Console.WriteLine(" -------------------------------------------------------");
+
+            //---------------------------------------------------------------------------
+
+            //8. Print a Pyramid Pattern (For Loop)
+
+            int n1;
+            Console.WriteLine("Enter a number : ");
+            n1 = int.Parse(Console.ReadLine());
+
+            for (int index = 1; index <= n1; index++)
+            {
+                for (int space = 1; space <= n1 - index; space++)
+                {
+                    Console.Write(" ");
+                }
+                for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
 
         }
     }
