@@ -271,14 +271,14 @@ namespace CsharpExercisesPart1
 
             //2.Basic ATM System
 
-            char choice;
+            char doAgain;
             do
             {
                 Console.Clear();
                 double balance = 1000;
                 double withdraw, deposit;
                 Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
-                choice = Console.ReadKey().KeyChar;
+                char choice = Console.ReadKey().KeyChar;
                 bool isActive = false;
                 switch (choice)
                 {
@@ -286,6 +286,7 @@ namespace CsharpExercisesPart1
                         if (balance == 0)
                         {
                             Console.WriteLine("\nYour balance is : " + balance + " You cant withdraw");
+
                             return;
                         }
                         else
@@ -294,14 +295,13 @@ namespace CsharpExercisesPart1
                             withdraw = double.Parse(Console.ReadLine());
                             if (withdraw > balance)
                             {
-                                Console.WriteLine("This amount is not avilable Your balance is " + balance);
+                                isActive = false;
                                 return;
                             }
                             else
                             {
                                 balance = balance - withdraw;
                                 isActive = false;
-
                                 break;
                             }
                         }
@@ -310,33 +310,29 @@ namespace CsharpExercisesPart1
                         deposit = double.Parse(Console.ReadLine());
                         balance = balance + deposit;
                         isActive = false;
-
                         break;
                     case 'c':
                         isActive = false;
                         break;
                     default:
                         Console.WriteLine("\nInvalid choice");
-                        isActive = true;
                         break;
                 }
                 if (!isActive)
                 {
                     Console.WriteLine("\nYour balance is : " + balance);
-
                 }
-
                 Console.WriteLine("Do you want another operation ? y / n");
-                choice = Console.ReadKey().KeyChar;
+                doAgain = Console.ReadKey().KeyChar;
 
-            } while (choice == 'y' || choice == 'Y');
+            } while (doAgain == 'y' || doAgain == 'n');
 
             Console.WriteLine("\ngood bye");
-        
 
 
 
-        Console.WriteLine(" -------------------------------------------------------");
+
+            Console.WriteLine(" -------------------------------------------------------");
 
 
             //---------------------------------------------------------------------------
