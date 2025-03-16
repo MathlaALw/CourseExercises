@@ -271,51 +271,72 @@ namespace CsharpExercisesPart1
 
             //2.Basic ATM System
 
-            double balance = 1000;
             char choice;
-            double withdraw, deposit;
-            Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
-            choice = Console.ReadKey().KeyChar;
-            switch (choice)
+            do
             {
-                case 'w':
-                    if (balance == 0)
-                    {
-                        Console.WriteLine("\nYour balance is : " + balance + " You cant withdraw");
-                        return;
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nEnter amount to withdraw : \n");
-                        withdraw = double.Parse(Console.ReadLine());
-                        if (withdraw > balance)
+                Console.Clear();
+                double balance = 1000;
+                double withdraw, deposit;
+                Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
+                choice = Console.ReadKey().KeyChar;
+                bool isActive = false;
+                switch (choice)
+                {
+                    case 'w':
+                        if (balance == 0)
                         {
-                            Console.WriteLine("This amount is not avilable Your balance is " + balance);
+                            Console.WriteLine("\nYour balance is : " + balance + " You cant withdraw");
                             return;
                         }
                         else
                         {
-                            balance = balance - withdraw;
-                            Console.WriteLine("\nYour balance is : " + balance);
-                            break;
+                            Console.WriteLine("\nEnter amount to withdraw : \n");
+                            withdraw = double.Parse(Console.ReadLine());
+                            if (withdraw > balance)
+                            {
+                                Console.WriteLine("This amount is not avilable Your balance is " + balance);
+                                return;
+                            }
+                            else
+                            {
+                                balance = balance - withdraw;
+                                isActive = false;
+
+                                break;
+                            }
                         }
-                    }
-                case 'd':
-                    Console.WriteLine("\nEnter amount to deposit : ");
-                    deposit = double.Parse(Console.ReadLine());
-                    balance = balance + deposit;
+                    case 'd':
+                        Console.WriteLine("\nEnter amount to deposit : ");
+                        deposit = double.Parse(Console.ReadLine());
+                        balance = balance + deposit;
+                        isActive = false;
+
+                        break;
+                    case 'c':
+                        isActive = false;
+                        break;
+                    default:
+                        Console.WriteLine("\nInvalid choice");
+                        isActive = true;
+                        break;
+                }
+                if (!isActive)
+                {
                     Console.WriteLine("\nYour balance is : " + balance);
-                    break;
-                case 'c':
-                    Console.WriteLine("\nYour balance is : " + balance);
-                    break;
-                default:
-                    Console.WriteLine("\nInvalid choice");
-                    break;
-            }
+
+                }
+
+                Console.WriteLine("Do you want another operation ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+
+            Console.WriteLine("\ngood bye");
+        
 
 
-            Console.WriteLine(" -------------------------------------------------------");
+
+        Console.WriteLine(" -------------------------------------------------------");
 
 
             //---------------------------------------------------------------------------
@@ -487,6 +508,10 @@ namespace CsharpExercisesPart1
                 }
                 Console.WriteLine();
             }
+
+
+
+
 
 
         }
