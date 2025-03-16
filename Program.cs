@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CsharpExercisesPart1
 {
@@ -362,10 +363,22 @@ namespace CsharpExercisesPart1
                     break;
             }
 
+            Console.WriteLine(" -------------------------------------------------------");
 
+            //---------------------------------------------------------------------------
 
+            //4.Factorial of a Number
 
+            int factorialnumber;
+            Console.WriteLine("Enter a number to find the factorial : ");
+            factorialnumber = int.Parse(Console.ReadLine());
+            int fact = 1;
+            for (int i = 1; i <= factorialnumber; i++)
+            {
+                fact = fact * i;
 
+            }
+            Console.WriteLine("The factorial of " + factorialnumber + " is : " + fact);
         }
     }
 }
