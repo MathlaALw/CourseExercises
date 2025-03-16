@@ -412,6 +412,58 @@ namespace CsharpExercisesPart1
 
             //---------------------------------------------------------------------------
 
+
+
+            //6. Scientific Calculator (Switch-Case & Math Functions)
+
+
+            char userChoice;
+            Console.WriteLine("Choose a function : sin , cos , tan , sqrt , log , pow ( s , c , t , q , l , p )");
+            userChoice = Console.ReadKey().KeyChar;
+            switch (userChoice)
+            {
+                case 's':
+                    double sinValue;
+                    Console.WriteLine("\nEnter a number to find the sin value : ");
+                    sinValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The sin value of " + sinValue + " is : " + Math.Sin(sinValue));
+                    break;
+                case 'c':
+                    double cosValue;
+                    Console.WriteLine("\nEnter a number to find the cos value : ");
+                    cosValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The cos value of " + cosValue + " is : " + Math.Cos(cosValue));
+                    break;
+                case 't':
+                    double tanValue;
+                    Console.WriteLine("\nEnter a number to find the tan value : ");
+                    tanValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The tan value of " + tanValue + " is : " + Math.Tan(tanValue));
+                    break;
+                case 'q':
+                    double sqrtValue;
+                    Console.WriteLine("\nEnter a number to find the tan value : ");
+                    sqrtValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The tan value of " + sqrtValue + " is : " + Math.Sqrt(sqrtValue));
+                    break;
+                case 'l':
+                    double logValue;
+                    Console.WriteLine("\nEnter a number to find the log value : ");
+                    logValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The log value of " + logValue + " is : " + Math.Log(logValue));
+                    break;
+                case 'p':
+                    double powValue;
+                    Console.WriteLine("\nEnter a number to find the power value : ");
+                    powValue = double.Parse(Console.ReadLine());
+                    Console.WriteLine("The power value of " + powValue + " is : " + Math.Pow(powValue, 2));
+                    break;
+                default:
+                    Console.WriteLine("Invalid Choice");
+                    break;
+
+            }
+
         }
     }
 }
