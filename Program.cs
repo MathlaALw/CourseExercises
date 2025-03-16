@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Nodes;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CsharpExercisesPart1
@@ -437,43 +438,30 @@ namespace CsharpExercisesPart1
             char userChoice;
             Console.WriteLine("Choose a function : sin , cos , tan , sqrt , log , pow ( s , c , t , q , l , p )");
             userChoice = Console.ReadKey().KeyChar;
+            Console.WriteLine("\nEnter a number to find the value : ");
+            double value = double.Parse(Console.ReadLine());
             switch (userChoice)
             {
                 case 's':
-                    double sinValue;
-                    Console.WriteLine("\nEnter a number to find the sin value : ");
-                    sinValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The sin value of " + sinValue + " is : " + Math.Sin(sinValue));
+                   
+                  
+                    Console.WriteLine("The sin value of " + value + " is : " + Math.Sin(value));
                     break;
                 case 'c':
-                    double cosValue;
-                    Console.WriteLine("\nEnter a number to find the cos value : ");
-                    cosValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The cos value of " + cosValue + " is : " + Math.Cos(cosValue));
+
+                    Console.WriteLine("The cos value of " + value + " is : " + Math.Cos(value));
                     break;
                 case 't':
-                    double tanValue;
-                    Console.WriteLine("\nEnter a number to find the tan value : ");
-                    tanValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The tan value of " + tanValue + " is : " + Math.Tan(tanValue));
+                    Console.WriteLine("The tan value of " + value + " is : " + Math.Tan(value));
                     break;
                 case 'q':
-                    double sqrtValue;
-                    Console.WriteLine("\nEnter a number to find the tan value : ");
-                    sqrtValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The tan value of " + sqrtValue + " is : " + Math.Sqrt(sqrtValue));
+                    Console.WriteLine("The sqrt value of " + value + " is : " + Math.Sqrt(value));
                     break;
                 case 'l':
-                    double logValue;
-                    Console.WriteLine("\nEnter a number to find the log value : ");
-                    logValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The log value of " + logValue + " is : " + Math.Log(logValue));
+                    Console.WriteLine("The log value of " + value + " is : " + Math.Log(value));
                     break;
                 case 'p':
-                    double powValue;
-                    Console.WriteLine("\nEnter a number to find the power value : ");
-                    powValue = double.Parse(Console.ReadLine());
-                    Console.WriteLine("The power value of " + powValue + " is : " + Math.Pow(powValue, 2));
+                    Console.WriteLine("The power value of " + value + " is : " + Math.Pow(value, 2));
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
