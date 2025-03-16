@@ -379,6 +379,39 @@ namespace CsharpExercisesPart1
 
             }
             Console.WriteLine("The factorial of " + factorialnumber + " is : " + fact);
+
+
+            Console.WriteLine(" -------------------------------------------------------");
+
+            //---------------------------------------------------------------------------
+
+
+
+            //5. Sum of Even and Odd Numbers 
+
+            int sumeven = 0;
+            int sumodd = 0;
+            int userNumber;
+            Console.WriteLine("Enter a number : ");
+            userNumber = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= userNumber; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sumeven = sumeven + i;
+                }
+                else
+                {
+                    sumodd = sumodd + i;
+                }
+            }
+            Console.WriteLine("Sum of Even Numbers : " + sumeven);
+            Console.WriteLine("Sum of Odd Numbers : " + sumodd);
+
+            Console.WriteLine(" -------------------------------------------------------");
+
+            //---------------------------------------------------------------------------
+
         }
     }
 }
