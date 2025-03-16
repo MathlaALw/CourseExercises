@@ -267,7 +267,53 @@ namespace CsharpExercisesPart1
             ////---------------------------------------------------------------------------
 
 
+            //2.Basic ATM System
 
+            double balance = 40;
+            char choice;
+            double withdraw, deposit;
+            Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
+            choice = Console.ReadKey().KeyChar;
+            switch (choice)
+            {
+                case 'w':
+                    if (balance == 0)
+                    {
+                        Console.WriteLine("\nYour balance is : " + balance + " You cant withdraw");
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nEnter amount to withdraw : \n");
+                        withdraw = double.Parse(Console.ReadLine());
+                        if (withdraw > balance)
+                        {
+                            Console.WriteLine("This amount is not avilable Your balance is " + balance);
+                            return;
+                        }
+                        else
+                        {
+                            balance = balance - withdraw;
+                            Console.WriteLine("\nYour balance is : " + balance);
+                            break;
+                        }
+                    }
+                case 'd':
+                    Console.WriteLine("\nEnter amount to deposit : ");
+                    deposit = double.Parse(Console.ReadLine());
+                    balance = balance + deposit;
+                    Console.WriteLine("\nYour balance is : " + balance);
+                    break;
+                case 'c':
+                    Console.WriteLine("\nYour balance is : " + balance);
+                    break;
+                default:
+                    Console.WriteLine("\nInvalid choice");
+                    break;
+            }
+
+
+            Console.WriteLine(" -------------------------------------------------------");
 
 
 
