@@ -505,9 +505,45 @@ namespace CsharpExercisesPart1
                 Console.WriteLine();
             }
 
+            Console.WriteLine(" -------------------------------------------------------");
+
+            //---------------------------------------------------------------------------
+            //9. Print a Diamond Pattern (For Loop)
 
 
+            int numb;
+            Console.WriteLine("Enter a number : ");
+            numb = int.Parse(Console.ReadLine());
 
+            for (int index = 1; index <= numb; index++)
+            {
+                for (int space = 1; space <= numb - index; space++)
+                {
+                    Console.Write(" ");
+                }
+                for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            for (int index = numb - 1; index >= 1; index--)
+            {
+                for (int space = 1; space <= numb - index; space++)
+                {
+                    Console.Write(" ");
+                }
+                for (int starnum = 1; starnum <= 2 * index - 1; starnum++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+
+
+            }
+            Console.WriteLine(" -------------------------------------------------------");
+
+            //---------------------------------------------------------------------------
 
 
         }
