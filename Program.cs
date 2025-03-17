@@ -287,9 +287,9 @@ namespace CsharpExercisesPart1
                 double balance = 1000;
                 double withdraw, deposit;
                 Console.WriteLine("Chose what process you want withdraw , deposit or chechBalance ( w or d or c)");
-                char choice = Console.ReadKey().KeyChar;
+                char choice1 = Console.ReadKey().KeyChar;
                 bool isActive = false;
-                switch (choice)
+                switch (choice1)
                 {
                     case 'w':
                         if (balance == 0)
@@ -348,47 +348,55 @@ namespace CsharpExercisesPart1
 
 
             //3. Geometry Calculator
-            string choiceshape;
-            double area = 0;
-            double pi = 3.14159;
-            Console.WriteLine("Choose a shape: Circle , Square or Triangle ( c , s or t )");
-            choiceshape = Console.ReadLine();
-            switch (choiceshape)
+            char doingAgain;
+            do
             {
-                case "c":
-                    double radius, circumference;
-                    Console.WriteLine("Enter the radius of the circle: ");
-                    radius = double.Parse(Console.ReadLine());
-                    area = pi * radius * radius;
-                    circumference = 2 * pi * radius;
-                    Console.WriteLine("The area of the circle is: " + area);
-                    Console.WriteLine("The circumference of the circle is: " + circumference);
-                    break;
-                case "s":
-                    double side, perimeter;
-                    Console.WriteLine("Enter the length of the side of the square: ");
-                    side = double.Parse(Console.ReadLine());
-                    area = side * side;
-                    perimeter = 4 * side;
-                    Console.WriteLine("The area of the square is: " + area);
-                    Console.WriteLine("The perimeter of the square is: " + perimeter);
+                Console.Clear();
+                string choiceshape;
+                double area = 0;
+                double pi = 3.14159;
+                Console.WriteLine("Choose a shape: Circle , Square or Triangle ( c , s or t )");
+                choiceshape = Console.ReadLine();
+                switch (choiceshape)
+                {
+                    case "c":
+                        double radius, circumference;
+                        Console.WriteLine("Enter the radius of the circle: ");
+                        radius = double.Parse(Console.ReadLine());
+                        area = pi * radius * radius;
+                        circumference = 2 * pi * radius;
+                        Console.WriteLine("The area of the circle is: " + area);
+                        Console.WriteLine("The circumference of the circle is: " + circumference);
+                        break;
+                    case "s":
+                        double side, perimeter;
+                        Console.WriteLine("Enter the length of the side of the square: ");
+                        side = double.Parse(Console.ReadLine());
+                        area = side * side;
+                        perimeter = 4 * side;
+                        Console.WriteLine("The area of the square is: " + area);
+                        Console.WriteLine("The perimeter of the square is: " + perimeter);
 
-                    break;
-                case "t":
-                    double basetriangle;
-                    double heighttriangle;
-                    Console.WriteLine("Enter the base of the triangle: ");
-                    basetriangle = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter the height of the triangle: ");
-                    heighttriangle = double.Parse(Console.ReadLine());
-                    area = (basetriangle * heighttriangle) / 2;
-                    Console.WriteLine("The area of the triangle is: " + area);
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
-            }
+                        break;
+                    case "t":
+                        double basetriangle;
+                        double heighttriangle;
+                        Console.WriteLine("Enter the base of the triangle: ");
+                        basetriangle = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the height of the triangle: ");
+                        heighttriangle = double.Parse(Console.ReadLine());
+                        area = (basetriangle * heighttriangle) / 2;
+                        Console.WriteLine("The area of the triangle is: " + area);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice");
+                        break;
+                }
+                Console.WriteLine("Do you want to do another calculation? (y/n)");
+                doingAgain = char.Parse(Console.ReadLine());
 
+            } while (doingAgain == 'y' || doingAgain == 'Y');
+            Console.WriteLine("Goodbye");
             Console.WriteLine(" -------------------------------------------------------");
 
             //---------------------------------------------------------------------------
