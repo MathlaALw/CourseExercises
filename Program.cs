@@ -225,46 +225,54 @@ namespace CsharpExercisesPart1
 
             //1.Simple Calculator(Switch - Case)
 
-            int num_1, num_2, result1;
-            char Operator1;
-            Console.WriteLine("Enter number 1 : ");
-            num_1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter number 2 : ");
-            num_2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Operator  (+, -, *, /) : ");
-            Operator1 = char.Parse(Console.ReadLine());
-
-
-            switch (Operator1)
+            char choice;
+            do
             {
-                case '+':
-                    result1 = num_1 + num_2;
-                    Console.WriteLine("The result of addition is : " + result1);
-                    break;
-                case '-':
-                    result1 = num_1 - num_2;
-                    Console.WriteLine("The result subtraction is : " + result1);
-                    break;
-                case '*':
-                    result1 = num_1 * num_2;
-                    Console.WriteLine("The result multiplication is : " + result1);
-                    break;
-                case '/':
-                    if (num_2 == 0)
-                    {
-                        Console.WriteLine("Cannot divide by zero");
-                        return;
-                    }
-                    else
-                    {
-                        result1 = num_1 / num_2;
-                        Console.WriteLine("The result division is : " + result1);
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Invalid Operator");
-                    break;
-            }
+                Console.Clear();
+                int num_1, num_2, result1;
+                char Operator1;
+                Console.WriteLine("Enter number 1 : ");
+                num_1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter number 2 : ");
+                num_2 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Operator  (+, -, *, /) : ");
+                Operator1 = char.Parse(Console.ReadLine());
+
+
+                switch (Operator1)
+                {
+                    case '+':
+                        result1 = num_1 + num_2;
+                        Console.WriteLine("The result of addition is : " + result1);
+                        break;
+                    case '-':
+                        result1 = num_1 - num_2;
+                        Console.WriteLine("The result subtraction is : " + result1);
+                        break;
+                    case '*':
+                        result1 = num_1 * num_2;
+                        Console.WriteLine("The result multiplication is : " + result1);
+                        break;
+                    case '/':
+                        if (num_2 == 0)
+                        {
+                            Console.WriteLine("Cannot divide by zero");
+                            return;
+                        }
+                        else
+                        {
+                            result1 = num_1 / num_2;
+                            Console.WriteLine("The result division is : " + result1);
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Operator");
+                        break;
+                }
+                Console.WriteLine("Do you want to continue (y/n) : ");
+                choice = char.Parse(Console.ReadLine());
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("Goodbye");
 
             Console.WriteLine(" -------------------------------------------------------");
             //---------------------------------------------------------------------------
@@ -326,7 +334,7 @@ namespace CsharpExercisesPart1
                 Console.WriteLine("Do you want another operation ? y / n");
                 doAgain = Console.ReadKey().KeyChar;
 
-            } while (doAgain == 'y' || doAgain == 'n');
+            } while (doAgain == 'y' || doAgain == 'Y');
 
             Console.WriteLine("\ngood bye");
 
@@ -352,8 +360,8 @@ namespace CsharpExercisesPart1
                     Console.WriteLine("Enter the radius of the circle: ");
                     radius = double.Parse(Console.ReadLine());
                     area = pi * radius * radius;
-                    Console.WriteLine("The area of the circle is: " + area);
                     circumference = 2 * pi * radius;
+                    Console.WriteLine("The area of the circle is: " + area);
                     Console.WriteLine("The circumference of the circle is: " + circumference);
                     break;
                 case "s":
@@ -361,8 +369,8 @@ namespace CsharpExercisesPart1
                     Console.WriteLine("Enter the length of the side of the square: ");
                     side = double.Parse(Console.ReadLine());
                     area = side * side;
-                    Console.WriteLine("The area of the square is: " + area);
                     perimeter = 4 * side;
+                    Console.WriteLine("The area of the square is: " + area);
                     Console.WriteLine("The perimeter of the square is: " + perimeter);
 
                     break;
@@ -539,19 +547,19 @@ namespace CsharpExercisesPart1
 
             int guess;
             Console.WriteLine("Guess the number between 1 and 100");
-            guess = Convert.ToInt32(Console.ReadLine());
+            guess = int.Parse(Console.ReadLine());
 
             while (guess != randomNumber)
             {
                 if (guess < randomNumber)
                 {
                     Console.WriteLine("Too low, try again");
-                    guess = Convert.ToInt32(Console.ReadLine());
+                    guess = int.Parse(Console.ReadLine());
                 }
                 else if (guess > randomNumber)
                 {
                     Console.WriteLine("Too high, try again");
-                    guess = Convert.ToInt32(Console.ReadLine());
+                    guess = int.Parse(Console.ReadLine());
                 }
             }
 
