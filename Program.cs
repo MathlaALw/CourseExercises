@@ -271,17 +271,184 @@ namespace CsharpExercisesPart1
 
 
 
+            //------------------------------------- Exercise 1 ( Part 3) -------------------------------------
+
+
+
+
+            //1. Array Initialization & Output
+            int[] numbers = new int[5] { 1, 2, 3, 4, 5 };
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+
+            //----------------------------------------------------
+
+
+            //2. Find Maximum & Minimum in an Array
+
+            int[] maxMinNumb = new int[10];
+
+            Console.WriteLine("Enter 10 numbers :");
+            for (int i = 0; i < 10; i++)
+            {
+                maxMinNumb[i] = int.Parse(Console.ReadLine());
+            }
+            int max = maxMinNumb[0], min = maxMinNumb[0];
+            for (int i = 0; i < 10; i++)
+            {
+                if (maxMinNumb[i] > max)
+                {
+                    max = maxMinNumb[i];
+                }
+                if (maxMinNumb[i] < min)
+                {
+                    min = maxMinNumb[i];
+                }
+            }
+            Console.WriteLine("Maximum element is " + max);
+            Console.WriteLine("Minimum element is " + min);
+
+
+            //----------------------------------------------------
+
+
+            //3. Count Even & Odd Numbers
+
+
+
+            Console.WriteLine("Enter array size");
+            int n = int.Parse(Console.ReadLine());
+            int[] countEvenOdd = new int[n];
+            Console.WriteLine("Enter Numbers ");
+            int countEven = 0, countOdd = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                countEvenOdd[i] = int.Parse(Console.ReadLine());
+
+
+            }
+            for (int i = 0; i < n; i++)
+            {
+                if (countEvenOdd[i] % 2 == 0)
+                {
+                    countEven = countEven + 1;
+                }
+                else
+                {
+                    countOdd = countOdd + 1;
+                }
+            }
+            Console.WriteLine("Count of even number is " + countEven);
+            Console.WriteLine("Count of odd number is " + countOdd);
+
+            //----------------------------------------------------
+
+            //4. Reverse an Array
+
+
+            Console.WriteLine("Enter array size");
+            int sizeOfArray = int.Parse(Console.ReadLine());
+            int[] reverseArray = new int[sizeOfArray];
+            Console.WriteLine("Enter Numbers ");
+
+
+            for (int i = 0; i < sizeOfArray; i++)
+            {
+                reverseArray[i] = int.Parse(Console.ReadLine());
+
+
+            }
+
+            Array.Reverse(reverseArray);
+            Console.Write(" the reverse array is ");
+            foreach (int numb in reverseArray)
+            {
+
+                Console.Write(numb + " ");
+            }
+
+            //----------------------------------------------------
+
+            //5. Search for a Number in an Array
+
+            Console.WriteLine("Enter array size");
+            int size = int.Parse(Console.ReadLine());
+            int[] searchArray = new int[size];
+            Console.WriteLine("Enter Numbers ");
+            for (int i = 0; i < size; i++)
+            {
+                searchArray[i] = int.Parse(Console.ReadLine());
+
+            }
+
+            Console.WriteLine("Enter number to search :");
+            int searchNumb = int.Parse(Console.ReadLine());
+            foreach (int item in searchArray)
+            {
+                if (item == searchNumb)
+                {
+                    int index = Array.IndexOf(searchArray, searchNumb);
+                    Console.WriteLine(" the index is " + index);
+                }
+            }
+
+            //----------------------------------------------------
+
+            //6. Sorting an Array (Ascending Order)
+
+            Console.WriteLine("Enter array size");
+            int sizeArray = int.Parse(Console.ReadLine());
+            int[] sortArray = new int[sizeArray];
+            Console.WriteLine("Enter Numbers ");
+            for (int i = 0; i < sizeArray; i++)
+            {
+                sortArray[i] = int.Parse(Console.ReadLine());
+
+            }
+
+            Array.Sort(sortArray);
+            Console.Write(" the sort array is ");
+            foreach (int numb in sortArray)
+            {
+
+                Console.Write(numb + " ");
+            }
+
+
+            //----------------------------------------------------
+
+            //7.Merging Two Arrays
+
+            Console.WriteLine("Enter array 1 size");
+            int sizeArr = int.Parse(Console.ReadLine());
+            int[] array1 = new int[sizeArr];
+            Console.WriteLine("Enter Numbers in array 1 : ");
+
+
+            for (int i = 0; i < sizeArr; i++)
+            {
+                array1[i] = int.Parse(Console.ReadLine());
+
+            }
+
+            int[] array2 = new int[sizeArr];
+            Console.WriteLine("Enter Numbers in array 2 : ");
+            for (int i = 0; i < sizeArr; i++)
+            {
+                array2[i] = int.Parse(Console.ReadLine());
+
+            }
+            int[] arrayMarge = new int[sizeArr + sizeArr];
 
 
 
 
 
 
-
-
-
-
-            
 
 
 
@@ -663,15 +830,8 @@ namespace CsharpExercisesPart1
 
 
 
-
-
-
-
-
-        
-    }
 }
-
+}
 
 
         
