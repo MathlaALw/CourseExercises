@@ -95,7 +95,7 @@ namespace CsharpExercisesPart1
 
 
 
-            //------------------------------------- Exercise 1 ( Part 3) -------------------------------------
+            //------------------------------------- Exercise 1 -------------------------------------
 
 
 
@@ -922,7 +922,7 @@ namespace CsharpExercisesPart1
         {
             //9. Simple Calculator
 
-            int numb1, numb2, result;
+            double numb1, numb2, result;
             char Operator;
             Console.WriteLine("Enter number 1 : ");
             numb1 = int.Parse(Console.ReadLine());
