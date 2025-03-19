@@ -452,29 +452,33 @@ namespace CsharpExercisesPart1
             //10.Guess Game with helper with while loop
             static void GuessGame()
             {
-                Random random = new Random();
-                int randomNumber = random.Next(1, 100);
+            Random random = new Random();
+            int randomNumber = random.Next(1, 100);
 
-                int guess;
-                Console.WriteLine("Guess the number between 1 and 100");
-                guess = int.Parse(Console.ReadLine());
+            int guess, count = 1;
+            Console.WriteLine("Guess the number between 1 and 100");
+            guess = int.Parse(Console.ReadLine());
 
-                while (guess != randomNumber)
+            while (guess != randomNumber)
+            {
+
+                if (guess < randomNumber)
                 {
-                    if (guess < randomNumber)
-                    {
-                        Console.WriteLine("Too low, try again");
-                        guess = int.Parse(Console.ReadLine());
-                    }
-                    else if (guess > randomNumber)
-                    {
-                        Console.WriteLine("Too high, try again");
-                        guess = int.Parse(Console.ReadLine());
-                    }
+                    Console.WriteLine("Too low, try again");
+                    guess = int.Parse(Console.ReadLine());
+                    count += 1;
                 }
-
-                Console.WriteLine("You guessed the number!");
+                else if (guess > randomNumber)
+                {
+                    Console.WriteLine("Too high, try again");
+                    guess = int.Parse(Console.ReadLine());
+                    count += 1;
+                }
             }
+
+            Console.WriteLine("You guessed the number!");
+            Console.WriteLine("You guessed number in " + count + " time");
+        }
 
         // part 3
             static void ArrayInitialization()
